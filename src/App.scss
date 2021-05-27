@@ -1,0 +1,787 @@
+@import url('https://fonts.googleapis.com/css2?family=Sen:wght@400;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap');
+
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1024px;
+
+body {
+  font-family: 'Sen', sans-serif;
+  overflow-x: hidden;
+}
+
+//hero
+
+.hero {
+  background-image: url('./assets/hero-img.png');
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &__side-nav {
+    margin-right: 30px;
+  }
+
+  &__nav-link {
+    font-weight: 800;
+    color: #000000 !important;
+    text-transform: uppercase;
+    margin-left: 40px;
+
+    &:hover {
+      color: rgb(80, 77, 77) !important;
+    }
+  }
+
+  &__icon-container {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    align-items: flex-end;
+    flex-direction: column;
+    margin-right: 52px;
+    margin-top: 100px;
+    position: absolute;
+  }
+
+  &__icon {
+    margin-bottom: 12px;
+    margin-right: 42px;
+    font-size: 16px;
+    background-color: #f6c82a;
+    padding: 10px;
+
+    &:hover {
+      color: #ffffff;
+    }
+
+    @media (min-width: $breakpoint-tablet) {
+      background-color: transparent;
+    }
+  }
+
+  &__header-text {
+    margin-top: 335px;
+    margin-left: 30px;
+
+    @media (min-width: $breakpoint-tablet) {
+      margin-left: 119px;
+      width: 500px;
+    }
+
+    & a:hover {
+      text-decoration: none;
+    }
+  }
+
+  &__subtitle {
+    font-family: 'Sedgwick Ave Display', cursive;
+    font-size: 20px;
+  }
+
+  &__title {
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 48px;
+    line-height: 50px;
+    margin-bottom: 36px;
+    background-color: #f6c82a;
+
+    @media (min-width: $breakpoint-tablet) {
+      font-size: 57px;
+    }
+
+    @media (min-width: $breakpoint-desktop) {
+      background-color: transparent;
+    }
+  }
+
+  &__button {
+    border-radius: 21px;
+    background-color: #000000;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 20px;
+    color: #f6c82a;
+    border: 0;
+    padding: 9px 30px;
+    margin-bottom: 57px;
+
+    &:hover {
+      background-color: rgb(80, 77, 77);
+    }
+  }
+}
+
+.releases {
+  background: linear-gradient(90deg, #393939 60%, #1b1b1b 40%);
+
+  &__title {
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #fff;
+    font-weight: 800;
+    font-size: 70px;
+    color: transparent;
+    text-transform: uppercase;
+    margin-left: 30px;
+    padding-top: 55px;
+    margin-bottom: 30px;
+
+    @media (min-width: $breakpoint-tablet) {
+      margin-left: 119px;
+    }
+  }
+
+  &__img-container {
+    display: flex;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  &__img-square {
+    display: flex;
+    flex-wrap: wrap;
+    width: 500px;
+  }
+
+  &__img-sm {
+    width: 248px;
+  }
+
+  &__img-descrip-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  &__img-description {
+    position: absolute;
+    top: 0;
+    bottom: -18px;
+    left: 0;
+    right: 0;
+    background: rgba(29, 106, 154, 0.72);
+    color: #fff;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.2s, visibility 0.2s;
+    text-align: center;
+    color: #f6c82a;
+    font-weight: 800;
+    font-size: 24px;
+    text-transform: uppercase;
+    padding-top: 80px;
+  }
+
+  &__img-descrip-container:hover .releases__img-description {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  &__button {
+    display: flex;
+    justify-content: flex-end;
+    border-radius: 21px;
+    color: #000000;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 20px;
+    background-color: #f6c82a;
+    border: 0;
+    padding: 9px 30px;
+    margin-bottom: 57px;
+
+    &:hover {
+      background-color: rgb(80, 77, 77);
+    }
+  }
+
+  &__btn-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 65px;
+    margin-right: 132px;
+
+    & a:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+.tour {
+  background-color: #000000;
+  color: #ffffff;
+
+  &__title {
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #fff;
+    font-weight: 800;
+    font-size: 70px;
+    color: transparent;
+    text-transform: uppercase;
+    margin-left: 30px;
+    padding-top: 55px;
+    margin-bottom: 25px;
+
+    @media (min-width: $breakpoint-tablet) {
+      margin-left: 119px;
+    }
+  }
+
+  &__dates-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  &__dates-row {
+    display: flex;
+    border-bottom: 1px solid transparent;
+    border-image: linear-gradient(
+      to right,
+      rgba(246, 200, 42, 0.2),
+      rgba(246, 200, 42, 0.4)
+    );
+    border-image-slice: 1;
+    justify-content: space-between;
+    margin: 0px 20px;
+
+    @media (min-width: $breakpoint-tablet) {
+      width: 560px;
+    }
+  }
+
+  &__dates-col {
+    &--row {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__venue {
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 24px;
+  }
+
+  &__date {
+    font-family: 'Sedgwick Ave Display', cursive;
+    font-size: 20px;
+  }
+
+  &__city {
+    font-size: 22px;
+    text-transform: uppercase;
+    padding-bottom: 24px;
+  }
+
+  a:hover {
+    text-decoration: none;
+  }
+
+  &__links {
+    text-transform: uppercase;
+    color: #f9d536;
+    font-size: 16px;
+    font-weight: 800;
+    margin-left: 15px;
+
+    &:hover {
+      color: #ffffff;
+    }
+  }
+
+  &__button {
+    display: flex;
+    justify-content: flex-end;
+    border-radius: 21px;
+    color: #000000;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 20px;
+    background-color: #f6c82a;
+    border: 0;
+    padding: 9px 30px;
+    margin-bottom: 57px;
+
+    &:hover {
+      background-color: rgb(80, 77, 77);
+    }
+  }
+
+  &__btn-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 65px;
+    margin-right: 132px;
+
+    & a:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+/* Slider */
+.slick-slider {
+  position: relative;
+
+  display: block;
+  box-sizing: border-box;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  -webkit-touch-callout: none;
+  -khtml-user-select: none;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.slick-list {
+  position: relative;
+
+  display: block;
+  overflow: hidden;
+
+  margin: 0;
+  padding: 0;
+}
+.slick-list:focus {
+  outline: none;
+}
+.slick-list.dragging {
+  cursor: pointer;
+  cursor: hand;
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.slick-track {
+  position: relative;
+  top: 0;
+  left: 0;
+
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.slick-track:before,
+.slick-track:after {
+  display: table;
+
+  content: '';
+}
+.slick-track:after {
+  clear: both;
+}
+.slick-loading .slick-track {
+  visibility: hidden;
+}
+
+.slick-slide {
+  display: none;
+  float: left;
+
+  height: 100%;
+  min-height: 1px;
+}
+[dir='rtl'] .slick-slide {
+  float: right;
+}
+.slick-slide img {
+  display: block;
+}
+.slick-slide.slick-loading img {
+  display: none;
+}
+.slick-slide.dragging img {
+  pointer-events: none;
+}
+.slick-initialized .slick-slide {
+  display: block;
+}
+.slick-loading .slick-slide {
+  visibility: hidden;
+}
+.slick-vertical .slick-slide {
+  display: block;
+
+  height: auto;
+
+  border: 1px solid transparent;
+}
+.slick-arrow.slick-hidden {
+  display: none;
+}
+.slick-list h3 {
+  background: red;
+  width: 200px;
+}
+.slick-track div:nth-child(1) {
+  margin-right: 10px;
+}
+.slick-arrow {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 34px;
+  height: 34px;
+  padding: 0;
+  text-indent: -9999px;
+  background-repeat: no-repeat;
+  background: transparent;
+  border: none;
+  &:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 2;
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+  }
+  &.slick-prev {
+    transform: translateX(-50%) translateX(-30px);
+    z-index: 2;
+    &:after {
+      transform: translateX(-50%) translateX(-2px) translateY(-50%);
+      border-width: 9px 12px 9px 0;
+      border-color: transparent #fff transparent transparent;
+    }
+  }
+  &.slick-next {
+    transform: translateX(-50%) translateX(30px);
+    z-index: 1;
+    &:after {
+      transform: translateX(-50%) translateX(2px) translateY(-50%);
+      border-width: 9px 0 9px 12px;
+      border-color: transparent transparent transparent #fff;
+    }
+  }
+  &.slick-disabled {
+    cursor: default;
+    background: transparent;
+    opacity: 0.5;
+  }
+}
+.slides .slide {
+  display: inline-block;
+  padding: 10px 20px;
+}
+.slides .slide img {
+  width: 200px;
+}
+
+.hidden {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+}
+
+.videos {
+  background-color: #1b1b1b;
+  color: #ffffff;
+
+  &__title {
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #fff;
+    font-weight: 800;
+    font-size: 70px;
+    color: transparent;
+    text-transform: uppercase;
+    margin-left: 30px;
+    padding-top: 55px;
+    margin-bottom: 25px;
+
+    @media (min-width: $breakpoint-tablet) {
+      margin-left: 119px;
+    }
+  }
+
+  &__button {
+    display: flex;
+    justify-content: flex-end;
+    border-radius: 21px;
+    color: #000000;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 20px;
+    background-color: #f6c82a;
+    border: 0;
+    padding: 9px 30px;
+    margin-bottom: 57px;
+
+    &:hover {
+      background-color: rgb(80, 77, 77);
+    }
+  }
+
+  &__btn-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 65px;
+    margin-right: 132px;
+
+    & a:hover {
+      text-decoration: none;
+    }
+  }
+
+  &__slide-title {
+    font-size: 40px;
+    font-weight: 800;
+  }
+
+  &__slide-artist {
+    font-family: 'Sedgwick Ave Display', cursive;
+    font-size: 20px;
+  }
+}
+
+.store {
+  background: radial-gradient(#f6c82a, #e9bb1f);
+
+  &__title {
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #000;
+    font-weight: 800;
+    font-size: 70px;
+    color: transparent;
+    text-transform: uppercase;
+    margin-left: 30px;
+    padding-top: 55px;
+    margin-bottom: 25px;
+
+    @media (min-width: $breakpoint-tablet) {
+      margin-left: 119px;
+    }
+  }
+
+  &__items {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    margin: 0 10px;
+
+    img {
+      transition: 1s ease;
+      width: 100%;
+    }
+    img:hover {
+      -webkit-transform: rotateZ(-10deg);
+      -ms-transform: rotateZ(-10deg);
+      transform: rotateZ(-10deg);
+      transition: 1s ease;
+    }
+  }
+
+  &__item-text {
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 26px;
+  }
+
+  &__item-price {
+    font-family: 'Sedgwick Ave Display', cursive;
+    font-size: 20px;
+  }
+
+  &__button {
+    display: flex;
+    justify-content: flex-end;
+    border-radius: 21px;
+    color: #f6c82a;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 20px;
+    background-color: #000000;
+    border: 0;
+    padding: 9px 30px;
+    margin-bottom: 57px;
+
+    &:hover {
+      background-color: rgb(80, 77, 77);
+    }
+  }
+
+  &__btn-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 65px;
+    margin-right: 132px;
+
+    & a:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+.photos {
+  background-color: #000000;
+
+  &__title {
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #fff;
+    font-weight: 800;
+    font-size: 70px;
+    color: transparent;
+    text-transform: uppercase;
+    margin-left: 30px;
+    padding-top: 55px;
+    margin-bottom: 25px;
+
+    @media (min-width: $breakpoint-tablet) {
+      margin-left: 119px;
+    }
+  }
+
+  &__img-container {
+    max-width: 1200px;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  &__button {
+    display: flex;
+    justify-content: flex-end;
+    border-radius: 21px;
+    color: #000000;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 20px;
+    background-color: #f6c82a;
+    border: 0;
+    padding: 9px 30px;
+    margin-bottom: 57px;
+
+    &:hover {
+      background-color: rgb(80, 77, 77);
+    }
+  }
+
+  &__btn-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 65px;
+    margin-right: 132px;
+
+    & a:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+.subscribe {
+  background-color: #1b1b1b;
+  color: #ffffff;
+  text-transform: uppercase;
+  padding-bottom: 78px;
+
+  &__title {
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #fff;
+    font-weight: 800;
+    font-size: 70px;
+    color: transparent;
+    text-transform: uppercase;
+    padding-top: 55px;
+    margin-bottom: 25px;
+  }
+
+  &__form {
+    margin-left: 30px;
+
+    @media (min-width: $breakpoint-tablet) {
+      width: 710px;
+      margin: 0 auto;
+    }
+  }
+
+  &__input {
+    border-bottom: 2px solid #f6c82a !important;
+    background-color: transparent !important;
+    margin-right: 20px;
+  }
+
+  &__country {
+    background-color: #f6c82a;
+    padding: 10px 20px;
+    width: 100%;
+  }
+
+  &__button {
+    display: flex;
+    justify-content: flex-end;
+    border-radius: 21px;
+    color: #000;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 20px;
+    background-color: #f6c82a;
+    border: 0;
+    padding: 9px 80px;
+    margin-top: 10px;
+
+    &:hover {
+      background-color: rgb(80, 77, 77);
+    }
+  }
+
+  &__checkbox-title {
+    font-family: 'Sedgwick Ave Display', cursive;
+    font-size: 20px;
+    margin-top: 35px;
+    margin-bottom: 10px;
+  }
+
+  &__checkbox {
+    color: #f6c82a;
+    font-weight: 800;
+    margin-right: 20px;
+    margin-bottom: 30px;
+  }
+
+  &__policy {
+    font-size: 14px;
+    font-weight: 800;
+
+    span {
+      color: #f6c82a;
+    }
+  }
+}
+
+.footer {
+  background-color: #000000;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding-top: 10px;
+
+  h5 {
+    font-size: 16px;
+    font-weight: 800;
+    color: #f6c82a;
+  }
+}
