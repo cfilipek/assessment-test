@@ -587,6 +587,7 @@ body {
     img {
       transition: 1s ease;
       width: 100%;
+      max-width: 396px;
     }
     img:hover {
       -webkit-transform: rotateZ(-10deg);
